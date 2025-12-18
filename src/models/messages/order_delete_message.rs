@@ -54,7 +54,7 @@ impl TMessage for OrderDeleteMessage {
 
         buffer_utils::write_alpha(&mut binary, MESSAGE_TYPE_BYTE_OFFSET, &self.message_type.value);
         buffer_utils::write_num(&mut binary, NANOSECONDS_BYTE_OFFSET, &self.nanoseconds.value.to_be_bytes());
-        buffer_utils::write_num(&mut binary, ORDER_ID_BYTE_OFFSET, &self.order_book_id.value.to_be_bytes());
+        buffer_utils::write_num(&mut binary, ORDER_ID_BYTE_OFFSET, &self.order_id.value.to_be_bytes());
         buffer_utils::write_num(&mut binary, ORDER_BOOK_ID_BYTE_OFFSET, &self.order_book_id.value.to_be_bytes());
         buffer_utils::write_alpha(&mut binary, SIDE_BYTE_OFFSET, &self.side.value);
 

@@ -176,15 +176,15 @@ impl TMessage for CombinationOrderBookDirectoryMessage {
         buffer_utils::write_alpha(&mut binary, LEG_1_SYMBOL_BYTE_OFFSET, &self.leg_1_symbol.value);
         buffer_utils::write_alpha(&mut binary, LEG_1_SIDE_BYTE_OFFSET, &self.leg_1_side.value);
         buffer_utils::write_num(&mut binary, LEG_1_RATIO_BYTE_OFFSET, &self.leg_1_ratio.value.to_be_bytes());
-        buffer_utils::write_alpha(&mut binary, LEG_2_SYMBOL_BYTE_OFFSET, &self.leg_1_symbol.value);
-        buffer_utils::write_alpha(&mut binary, LEG_2_SIDE_BYTE_OFFSET, &self.leg_1_side.value);
-        buffer_utils::write_num(&mut binary, LEG_2_RATIO_BYTE_OFFSET, &self.leg_1_ratio.value.to_be_bytes());
-        buffer_utils::write_alpha(&mut binary, LEG_3_SYMBOL_BYTE_OFFSET, &self.leg_1_symbol.value);
-        buffer_utils::write_alpha(&mut binary, LEG_3_SIDE_BYTE_OFFSET, &self.leg_1_side.value);
-        buffer_utils::write_num(&mut binary, LEG_3_RATIO_BYTE_OFFSET, &self.leg_1_ratio.value.to_be_bytes());
-        buffer_utils::write_alpha(&mut binary, LEG_4_SYMBOL_BYTE_OFFSET, &self.leg_1_symbol.value);
-        buffer_utils::write_alpha(&mut binary, LEG_4_SIDE_BYTE_OFFSET, &self.leg_1_side.value);
-        buffer_utils::write_num(&mut binary, LEG_4_RATIO_BYTE_OFFSET, &self.leg_1_ratio.value.to_be_bytes());
+        buffer_utils::write_alpha(&mut binary, LEG_2_SYMBOL_BYTE_OFFSET, &self.leg_2_symbol.value);
+        buffer_utils::write_alpha(&mut binary, LEG_2_SIDE_BYTE_OFFSET, &self.leg_2_side.value);
+        buffer_utils::write_num(&mut binary, LEG_2_RATIO_BYTE_OFFSET, &self.leg_2_ratio.value.to_be_bytes());
+        buffer_utils::write_alpha(&mut binary, LEG_3_SYMBOL_BYTE_OFFSET, &self.leg_3_symbol.value);
+        buffer_utils::write_alpha(&mut binary, LEG_3_SIDE_BYTE_OFFSET, &self.leg_3_side.value);
+        buffer_utils::write_num(&mut binary, LEG_3_RATIO_BYTE_OFFSET, &self.leg_3_ratio.value.to_be_bytes());
+        buffer_utils::write_alpha(&mut binary, LEG_4_SYMBOL_BYTE_OFFSET, &self.leg_4_symbol.value);
+        buffer_utils::write_alpha(&mut binary, LEG_4_SIDE_BYTE_OFFSET, &self.leg_4_side.value);
+        buffer_utils::write_num(&mut binary, LEG_4_RATIO_BYTE_OFFSET, &self.leg_4_ratio.value.to_be_bytes());
 
         Ok(binary)
     }

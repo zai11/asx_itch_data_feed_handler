@@ -121,7 +121,7 @@ impl TMessage for AddOrderWithParticipantIdMessage {
     }
 
     fn validate_fields(&self) -> Result<(), DataFeedError> {
-        if self.message_type.value == ['F'] {
+        if self.message_type.value != ['F'] {
             return Err(DataFeedError::InvalidMessageType('F', self.message_type.value[0]));
         }
 
